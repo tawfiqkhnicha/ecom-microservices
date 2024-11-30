@@ -22,8 +22,6 @@ public class CommandLineRunnerConfig {
                         .email("username_" + i + "@gmail.com")
                         .build()).toList();
 
-        return args -> {
-            customerRepository.saveAll(customers);
-        };
+        return args -> customerRepository.saveAll(customers);
     }
 }
